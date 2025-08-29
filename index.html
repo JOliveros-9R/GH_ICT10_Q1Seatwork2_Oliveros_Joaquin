@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+    <title>SW2: Drive-IN/OUT</title>
+   <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: black;
+        }
+        header {
+            background-color: goldenrod;
+            color: black;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        header p {
+            margin: 5px 0;
+            font-size: 1em;
+        }
+        .icon {
+            font-size: 2em;
+        }
+        .menu-section {
+            background-color: white;
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #e0e0e0;
+        }
+        .hours {
+            background-color: #eeeeee;
+            text-align: center;
+            padding: 15px;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 8px;
+        }
+        .button {
+            display: block;
+            margin: 0 auto 30px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="restaurant-title"></h1>
+        <p id="owner-info"></p>
+        <p id="year-info"></p>
+    </header>
+    <div class="menu-section">
+        <h2>Menu Pricelist</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Price (₱)</th>
+                </tr>
+            </thead>
+            <tbody id="menu-table">
+            </tbody>
+        </table>
+    </div>
+    <div class="hours" id="hours-info"></div>
+    <button class="button">Dine-in Available</button>
+    <py-script src="main.py"></py-script>
+</body>
+</html>
